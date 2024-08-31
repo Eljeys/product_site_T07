@@ -164,6 +164,12 @@ div {
   /* rotate: -45deg; */
 }
 
+.priceBefore {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  color: rgba(0, 0, 0, 0.379);
+}
+
 /*SOLDOUT*/
 .productCard .soldOut {
   display: flex;

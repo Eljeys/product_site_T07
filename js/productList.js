@@ -24,7 +24,7 @@ function showProduct(product) {
   copy.querySelector(".subCategory").textContent = product.subcategory;
   copy.querySelector(
     ".productCard__price"
-  ).textContent = `pre DKK ${product.price} ,-`;
+  ).textContent = `DKK ${product.price} ,-`;
   // copy.querySelector(".newPrice").textContent = `${
   //   (product.price * product.discount) / 100
   // }`; //gik på beregningen for denne kommando.
@@ -34,6 +34,22 @@ function showProduct(product) {
   //betingeser for soldout og discount
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
+  }
+  if (product.discount != null) {
+    /*price Before*/
+    copy.querySelector(".productCard__price").classList.add("priceBefore");
+    //new Price
+    const price = product.price;
+    const procent = product.discount;
+    const newPrice = Math.round(price - (price * procent) / 100);
+    copy.querySelector(".newPrice").textContent = `Now ${newPrice} ,-`;
+
+    /*Discount in procent*/
+    const div = copy.querySelector("div");
+    const discountProcent = div.getElementsByTagName("p");
+    const lastP = discountProcent[discountProcent.length - 1];
+    lastP.textContent = ` Save ${product.discount} %`;
+    lastP.classList.add("discountProcent");
   }
   copy
     .querySelector(".productCard__link")
