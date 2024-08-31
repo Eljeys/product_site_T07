@@ -146,42 +146,22 @@
   justify-content: space-between;
 }
 
-/* .discount {
-  display: none;
-} */
-
-/* .discount {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+div {
+  position: relative;
+  padding-left: 0.5rem;
 }
-.discount p:last-child {
-  display: none;
-  background-color: red;
-  padding: 0.2rem;
-}
-.discount p:last-child::after {
-  background-color: red;
-  padding: 0.2rem;
-}
-
 .discountProcent {
-  background-color: red;
-  padding: 0.2rem;
-} */
-
-/* .discountProcent {
-  display: none;
-  content: " ";
-  background-color: red;
-  padding: 0.2rem;
+  /* position: absolute; */
+  background-color: yellow;
+  padding: 0.5rem;
+  width: 6rem;
   margin-right: 0.5rem;
-} */
-
-.discount {
-  content: " ";
-  background-color: red;
-  padding: 0.2rem;
-  margin-right: 0.5rem;
+  right: 10%;
+  top: 0%;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  /* rotate: -45deg; */
 }
 
 /*SOLDOUT*/
