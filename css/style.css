@@ -211,6 +211,7 @@ article {
 
 /*Product*/
 .product_wrapper {
+  border: 2px solid red; /* hjælpelinje*/
   display: grid;
   grid-template-columns: 2fr, 1fr;
   gap: 2rem;
