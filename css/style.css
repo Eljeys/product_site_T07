@@ -151,7 +151,6 @@ div {
   padding-left: 0.5rem;
 }
 .discountProcent {
-  /* position: absolute; */
   background-color: yellow;
   padding: 0.5rem;
   width: 6rem;
@@ -161,7 +160,6 @@ div {
   font-weight: bold;
   font-size: 1rem;
   border-radius: 4px;
-  /* rotate: -45deg; */
 }
 
 .priceBefore {
@@ -190,19 +188,26 @@ div {
   color: white;
 }
 
-/* .productCard_discount,
-article {
-  display: none;
-} */
-
 /*CATEGORYLIST SITE*/
 .categoryList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  /* grid-template-columns: 1fr 1fr; */
+  border: 3px solid green;
+  margin-top: 5rem;
 }
 
+.categoryList ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.categoryList li {
+  list-style: none;
+}
 .categoryList a {
+  width: 300px;
+  display: inline-flex;
   text-decoration: none;
   padding: 2rem;
   color: white;
@@ -212,6 +217,7 @@ article {
 /*Product*/
 .product_wrapper {
   border: 2px solid red; /* hjælpelinje*/
+  /* display: grid; */
   display: grid;
   grid-template-columns: 2fr, 1fr;
   gap: 2rem;
@@ -246,6 +252,7 @@ article {
 
 .productSize {
   display: flex;
+  flex-direction: row;
 }
 
 .productSize button {

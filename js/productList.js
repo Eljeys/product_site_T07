@@ -1,8 +1,11 @@
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
 /*https://kea-alt-del.dk/t7/api/products?limit=50&start=10 */
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  fetch("https://kea-alt-del.dk/t7/api/products?limit=20")
+  fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
     .then((res) => res.json())
     .then((data) => showProducts(data));
 }
@@ -52,46 +55,3 @@ function showProduct(product) {
   //append (hvor skal indholdet placeres i HTML)
   document.querySelector("main").appendChild(copy);
 }
-
-/*
-HTML struktur for card
-     <article class="productCard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1587.webp"
-            alt="Superfit Football hite Shoe"
-            class="productCard__img"
-          />
-          <h3 class="productCard__title">Superfit Football hite Shoe</h3>
-          <p class="productCard__subtle">Shoe | Kipsta</p>
-          <p class="productCard__price"><span>pre DKK 2099,-</span></p>
-          <div class="discount">
-            <p>Now DKK 925,-</p>
-            <p>-60%</p>
-          </div>
-          <a href="produkt.html" class="productCard__link">Read More</a>
-        </article>
-
-
-
-*/
-
-/*
- {
-    "id": 1537,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Red Net Jersey",
-    "price": 1299,
-    "discount": 57,
-    "brandname": "Puma",
-    "soldout": 0
-  }
-
-
-
-*/

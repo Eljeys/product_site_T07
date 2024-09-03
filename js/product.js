@@ -19,6 +19,11 @@ function showProduct(product) {
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
+  //added 3/9 (ik commitet)
+  if (product.soldout) {
+    document.querySelector(".product__image").classList.add("soldOut");
+  }
+
   document.querySelector("dl .modelName").textContent =
     product.productdisplayname;
   document.querySelector("dl .productColor").textContent = product.basecolour;
