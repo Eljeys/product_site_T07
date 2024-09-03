@@ -25,11 +25,6 @@ function showProduct(product) {
   copy.querySelector(
     ".productCard__price"
   ).textContent = `DKK ${product.price} ,-`;
-  // copy.querySelector(".newPrice").textContent = `${
-  //   (product.price * product.discount) / 100
-  // }`; //gik på beregningen for denne kommando.
-
-  // copy.querySelector("productCard__price").textContent = product.price;
 
   //betingeser for soldout og discount
   if (product.soldout) {
