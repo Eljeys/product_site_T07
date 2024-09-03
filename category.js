@@ -1,8 +1,6 @@
 fetch("https://kea-alt-del.dk/t7/api/categories")
   .then((respons) => respons.json())
-  .then(showCategories),
-  console.log("showCategories");
-
+  .then(showCategories);
 function showCategories(cats) {
   cats.forEach(showCategory);
 }

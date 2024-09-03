@@ -191,8 +191,6 @@ div {
 /*CATEGORYLIST SITE*/
 .categoryList {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
-  border: 3px solid green;
   margin-top: 5rem;
 }
 
