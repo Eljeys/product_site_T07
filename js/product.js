@@ -19,9 +19,27 @@ function showProduct(product) {
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
-  //added 3/9 (ik commitet)
+  document.querySelector(
+    ".info .productCard__price"
+  ).textContent = `DKK ${product.price},-`;
+
   if (product.soldout) {
     document.querySelector(".product__image").classList.add("soldOut");
+  }
+  if (product.discount) {
+    /*price Before*/
+    document.querySelector(".productCard__price").classList.add("priceBefore");
+    //new Price
+    document.querySelector(".newPrice").textContent = `Now ${Math.round(
+      product.price - (product.price * product.discount) / 100
+    )},-`;
+    /*Discount in procent*/
+    document.querySelector(
+      ".info__discount p+p"
+    ).textContent = `Save ${product.discount}%`;
+    document
+      .querySelector(".info__discount p+p")
+      .classList.add("discountProcent");
   }
 
   document.querySelector("dl .modelName").textContent =
