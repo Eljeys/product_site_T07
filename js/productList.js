@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
 /*https://kea-alt-del.dk/t7/api/products?limit=50&start=10 */
-window.addEventListener("DOMContentLoaded", init);
+// window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
