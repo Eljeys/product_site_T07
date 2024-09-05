@@ -214,7 +214,6 @@ div {
 
 /*Product*/
 .product_wrapper {
-  border: 2px solid red; /* hjælpelinje*/
   /* display: grid; */
   display: grid;
   grid-template-columns: 1fr, 1fr;
@@ -225,7 +224,9 @@ div {
   grid-column: 1 / -1;
   grid-row: 1;
 }
-
+.info dt {
+  padding-left: 0.5rem;
+}
 .product select {
   min-width: 100px;
 }
