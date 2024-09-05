@@ -8,9 +8,9 @@ let url = undefined;
 window.addEventListener("DOMContentLoaded", init);
 
 if (urlParams.has("category")) {
-  url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+  url = `https://kea-alt-del.dk/t7/api/products?category=${category}&limit=30`;
 } else {
-  url = "https://kea-alt-del.dk/t7/api/products";
+  url = "https://kea-alt-del.dk/t7/api/products?limit=30";
 }
 function init() {
   fetch(url)
