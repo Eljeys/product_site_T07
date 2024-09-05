@@ -1,11 +1,19 @@
+// "https://kea-alt-del.dk/t7/api/products?category=" + category
+/*https://kea-alt-del.dk/t7/api/products?limit=50&start=10 */
+
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
+let url = undefined;
 
-/*https://kea-alt-del.dk/t7/api/products?limit=50&start=10 */
-// window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("DOMContentLoaded", init);
 
+if (urlParams.has("category")) {
+  url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+} else {
+  url = "https://kea-alt-del.dk/t7/api/products";
+}
 function init() {
-  fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
+  fetch(url)
     .then((res) => res.json())
     .then((data) => showProducts(data));
 }
